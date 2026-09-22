@@ -1,0 +1,300 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 16px 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 680px;
+  margin-top: 0;
+}
+
+.header-image-container {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-img {
+  max-height: 260px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.social-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  user-select: none;
+}
+
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #4a4a4a;
+  transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.15s ease;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.social-card:hover {
+  transform: translateY(-3px);
+}
+
+.social-card:active {
+  transform: scale(0.94);
+}
+
+.social-card:focus-visible {
+  outline: 2px solid #0284c7;
+  outline-offset: 4px;
+  border-radius: 16px;
+}
+
+/* Running / Chasing Neon Light Border (No dots - runs from one side to another) */
+@keyframes spinSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes runningGlowWave {
+  0% {
+    box-shadow: 
+      -8px 0 20px 3px rgba(255, 0, 68, 0.95),
+      -2px 0 8px 1px rgba(255, 50, 100, 1),
+      8px 0 10px -2px rgba(0, 102, 255, 0.2);
+  }
+  25% {
+    box-shadow: 
+      0 -8px 20px 3px rgba(255, 0, 68, 0.8),
+      8px 0 16px 2px rgba(0, 102, 255, 0.8),
+      -3px 0 6px -1px rgba(255, 0, 68, 0.3);
+  }
+  50% {
+    box-shadow: 
+      8px 0 20px 3px rgba(0, 102, 255, 0.95),
+      2px 0 8px 1px rgba(0, 170, 255, 1),
+      -8px 0 10px -2px rgba(255, 0, 68, 0.2);
+  }
+  75% {
+    box-shadow: 
+      0 8px 20px 3px rgba(0, 102, 255, 0.8),
+      -8px 0 16px 2px rgba(255, 0, 68, 0.8),
+      3px 0 6px -1px rgba(0, 102, 255, 0.3);
+  }
+  100% {
+    box-shadow: 
+      -8px 0 20px 3px rgba(255, 0, 68, 0.95),
+      -2px 0 8px 1px rgba(255, 50, 100, 1),
+      8px 0 10px -2px rgba(0, 102, 255, 0.2);
+  }
+}
+
+.running-border-wrapper {
+  position: relative;
+  border-radius: 16px;
+  padding: 3px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: runningGlowWave 2.4s infinite linear;
+}
+
+.running-beam-bg {
+  position: absolute;
+  width: 280%;
+  height: 280%;
+  left: -90%;
+  top: -90%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    #ff0044 45deg,
+    rgba(255, 80, 130, 1) 70deg,
+    transparent 105deg,
+    transparent 180deg,
+    #0066ff 225deg,
+    rgba(0, 180, 255, 1) 250deg,
+    transparent 285deg,
+    transparent 360deg
+  );
+  animation: spinSlow 2.4s infinite linear;
+  pointer-events: none;
+}
+
+.icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.social-card:hover .icon-box {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Telegram */
+.icon-telegram {
+  background-color: #24a1de;
+}
+
+.tg-icon {
+  width: 26px;
+  height: 26px;
+  fill: #ffffff;
+  transform: translate(-1px, 0.5px);
+}
+
+/* WhatsApp */
+.icon-whatsapp {
+  background-color: #25d366;
+}
+
+.wa-icon {
+  width: 26px;
+  height: 26px;
+  fill: #ffffff;
+}
+
+/* imo */
+.icon-imo {
+  background-color: #008ce7;
+}
+
+.imo-text {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.label {
+  margin-top: 7px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #4a4a4a;
+  letter-spacing: -0.2px;
+  text-align: center;
+}
+
+@media (max-width: 380px) {
+  .social-container {
+    gap: 36px;
+  }
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+  .tg-icon, .wa-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .imo-text {
+    font-size: 16px;
+  }
+  .label {
+    font-size: 11.5px;
+    margin-top: 5px;
+  }
+}
+
+/* Notice Text below buttons */
+.buttons-notice-text {
+  margin-top: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+  padding: 9px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  line-height: 1.5;
+}
+
+/* Top 5 Ads Section - 1 inch (1in / 96px) above buttons */
+.top-ads-section {
+  margin-bottom: 1in;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-top: 10px;
+}
+
+/* Bottom Ads Section - 1 inch (1in / 96px) below buttons */
+.ads-section {
+  margin-top: 1in;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 40px;
+}
+
+.ad-slot {
+  width: 300px;
+  height: 250px;
+  min-width: 300px;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.ad-slot iframe {
+  width: 300px;
+  height: 250px;
+  border: none;
+  overflow: hidden;
+  display: block;
+}
+
