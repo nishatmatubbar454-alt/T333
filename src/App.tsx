@@ -162,6 +162,31 @@ export default function App() {
         <p className="buttons-notice-text" id="buttons-notice-text">
           উপরের এই তিনটা মাধ্যমে ভিডিও দেখতে পারবা
         </p>
+
+        {/* Compact Rules / Guide */}
+        <div className="rules-compact-card" id="rules-box">
+          <div className="rules-header">
+            <span className="rules-tag">⚠️ নিয়ম</span>
+          </div>
+          <div className="rules-steps">
+            <div className="rule-item">
+              <span className="rule-num">১</span>
+              <span className="rule-text">উপরে ৩ আইকন (⋮👆) ক্লিক করুন</span>
+            </div>
+            <div className="rule-item">
+              <span className="rule-num">২</span>
+              <span className="rule-text">Open in browser ক্লিক করুন</span>
+            </div>
+            <div className="rule-item">
+              <span className="rule-num">৩</span>
+              <span className="rule-text">Chrome ব্রাউজারে নিয়ে আসুন</span>
+            </div>
+            <div className="rule-item">
+              <span className="rule-num">৪</span>
+              <span className="rule-text">তারপর ঐ বাটনগুলোতে ক্লিক করুন</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* 10 Ads (1 inch below the buttons) */}

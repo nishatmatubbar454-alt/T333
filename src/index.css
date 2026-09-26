@@ -258,6 +258,77 @@ body {
   max-width: 96%;
 }
 
+/* Compact Rules Box (Always 2x2, strictly kept inside the box) */
+.rules-compact-card {
+  margin-top: 8px;
+  background: #fffdf5;
+  border: 1px dashed #fcd34d;
+  border-radius: 9px;
+  padding: 6px 10px;
+  width: 95%;
+  max-width: 440px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  box-sizing: border-box;
+}
+
+.rules-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.rules-tag {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #b45309;
+  letter-spacing: -0.1px;
+}
+
+.rules-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.rule-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: clamp(8.5px, 2.45vw, 10px);
+  color: #4b5563;
+  line-height: 1.25;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.rule-text {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.rule-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 13px;
+  height: 13px;
+  min-width: 13px;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+  border-radius: 50%;
+  font-size: 8.5px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
 /* Top 5 Ads Section - 1 inch (1in / 96px) above buttons */
 .top-ads-section {
   margin-bottom: 1in;
